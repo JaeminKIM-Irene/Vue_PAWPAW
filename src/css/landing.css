@@ -1,0 +1,15 @@
+.landingNav {
+    display: flex;
+    width: 35.8%;
+    margin: auto;
+}
+
+.landinglinks {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-family: 'Lexend';
+    font-size: 1.2vw;
+    width: 7vw;
+    text-align: center;
+}
