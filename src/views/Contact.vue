@@ -51,14 +51,17 @@
         },
         methods: {
             sendEmail() {
-                if (this.info.name.length > 0 && this.info.email.length > 0 && this.info.title.length > 0 && this.info.detail.length > 0){
+                if (this.info.name =='' && this.info.email =='' && this.info.title == ''&& this.info.detail == '') {
+                    alert('모든 항목을 작성해주세요.')
+                }
+                else if (!document.getElementById('agree').checked) {
+                    alert("개인정보 및 수집이용에 동의해주세요.")
+                }
+                else {
                     emailjs.sendForm('service_b2rxhcl', 'template_33z55kj', this.$refs.form, 'ZHP6hLoBsyIGThzBY')
                     .then (() => {
                         window.location.pathname='/contact/submit'
                     })
-                }
-                else {
-                    alert('모든 항목을 작성해주세요.')
                 }
             }
         }

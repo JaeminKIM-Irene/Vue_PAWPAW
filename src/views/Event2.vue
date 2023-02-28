@@ -26,7 +26,8 @@
                     </div>
                 </div>
                 <div className='eventDPoster'>
-                    <img :src="$route.params.poster2" alt="" className='eventDPoster2' />
+                    <img :src="require(`@/images/${$route.params.poster2N}`)" alt="" className='eventDPoster2' />
+                
                 </div>
             </div>
         </div>

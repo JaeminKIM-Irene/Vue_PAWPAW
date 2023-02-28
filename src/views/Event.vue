@@ -27,10 +27,13 @@
                 </ul>
             </div>
             <div className='eventContent2'>
-                <div v-for="(event, index) in filtered" :key="index" class="eventList">
-                    <img :src="event.poster1" alt="" class="eventPoster"/>
+                <div className='noResult' v-if="filtered.length == 0">
+                    예정된 전시가 없습니다
+                </div>
+                <div v-else v-for="(event, index) in filtered" :key="index" class="eventList" @click="$router.push({name: 'Event2', params:event})">
+                    <img :src="require(`@/images/${event.poster1N}`)" alt="" class="eventPoster"/>
                     <div className='eventD'>
-                    <div className='eventName' @click="$router.push({name: 'Event2', params:event})">{{event.name}}</div>
+                    <div className='eventName'>{{event.name}}</div>
                     <div className='eventD2'>{{event.place}}</div>
                     <div className='eventD2' >D{{getDday(event)}}</div>
                     <div className='eventD2' >{{getFull(event.duration[0])}} - {{getFull(event.duration[1])}}</div>
@@ -125,7 +128,7 @@
                         poster1: 'images/poster4.png',
                         poster1N: 'poster4.png',
                         poster2: 'images/imageUpload2.png',
-                        poster2N: '첨부파일명',
+                        poster2N: 'poster4.png',
                     },
                     {
                         id: 5,
