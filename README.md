@@ -10,7 +10,7 @@
 
  ## :calendar: 프로젝트 기간 :calendar:
 ### 2022.10-2022.11 </br></br></br>
-## :memo: Teck Stack :memo: 
+## :memo: Tech Stack :memo: 
 ### [Framework & Languages]
 <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
